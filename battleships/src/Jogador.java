@@ -121,7 +121,8 @@ public class Jogador {
     }
 
     //Metódo EscreveTabuleiro
-    //esse metódo vai exibir o tabuleiro na tela depois que os jogadores passaram suas cordenadas
+    //esse metódo vai exibir o tabuleiro na tela depois que os jogadores passaram suas cordenadas, ou seja,
+    //depois que cada cordenada de 3 submarinos, 2 cruzadores e um porta avião foi passado.
     public void escreveTabuleiro() {
         for (int i = 0; i < this.tamanho; i++) {
             for (int j = 0; j < this.tamanho; j++) {
@@ -131,6 +132,12 @@ public class Jogador {
         }
     }
 
+    //o metódo escreveTabuleiroParaAdversario além de 'escrever' um novo tabuleiro bonito com espaços entre cada 0
+    // vai mostrar as cordenadas das linhas e das colunas e vai fazer o mais importante que é
+    //risca o tabuleiro do adversário com um 'X' depois que um tiro foi dado.
+    // E esse tabuleiro é o tabuleiro que vai ser o mesmo para o jogador 1 e 2, então,
+    // o que acontece no tabuleiro do jogador 1 acontece no tabuleiro do jogador 2.
+    //
     public void escreveTabuleiroParaAdversario(char[][] tabuleiro){
         System.out.print("  ");
         for (int i = 0; i < this.tamanho; i++) {
